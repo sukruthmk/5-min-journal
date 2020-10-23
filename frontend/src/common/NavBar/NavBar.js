@@ -4,8 +4,8 @@ import { Nav, Navbar } from "react-bootstrap";
 
 const NavBar = (): React.Node => {
   return (
-    <Navbar bg="light" variant="light">
-      <Navbar.Brand href="#home">Five Min Journal</Navbar.Brand>
+    <Navbar>
+      <Navbar.Brand>My Journal</Navbar.Brand>
       <Nav className="mr-auto"></Nav>
       <Nav.Link href="#">Log out</Nav.Link>
     </Navbar>

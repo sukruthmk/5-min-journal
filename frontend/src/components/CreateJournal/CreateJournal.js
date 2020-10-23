@@ -2,8 +2,14 @@
 
 import * as React from "react";
 
+import DisplayDate from "./DisplayDate";
+
 const CreateJournal = (): React.Node => {
-  return <div></div>;
+  return (
+    <div>
+      <DisplayDate />
+    </div>
+  );
 };
 
 export default CreateJournal;
