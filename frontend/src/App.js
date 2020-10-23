@@ -12,11 +12,11 @@ function App() {
       <div>
         <NavBar />
         <Switch>
+          <Route path="/log">
+            <CreateJournal />
+          </Route>
           <Route path="/">
             <Home />
-          </Route>
-          <Route path="/log">
-            {/* <CreateJournal /> */}
           </Route>
         </Switch>
       </div>
