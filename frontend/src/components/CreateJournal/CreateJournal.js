@@ -23,15 +23,20 @@ const InputContainer = Styled.div`
   margin-top: 15px;
 `;
 
+const Label = Styled.div`
+  text-align: center;
+`;
+
 const Input = Styled(Form.Control)`
   background: transparent;
   border: none;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #D4D3CA;
+  border-radius: none;
   font-size: 12px;
-  margin-left: 15px;
   &:focus {
     background: transparent;
     border-color: inherit;
+    border-radius: none;
     box-shadow: none;
     color: inherit;
     outline: none;
@@ -50,8 +55,14 @@ const CreateJournal = (): React.Node => {
         </SubHeading>
         <Form>
           <InputContainer>
-            <span>1.</span>
-            <Input type="text" placeholder="" />
+            <Row>
+              <Col sm="1">
+                <Label>1.</Label>
+              </Col>
+              <Col sm="11">
+                <Input type="text" placeholder="" />
+              </Col>
+            </Row>
           </InputContainer>
         </Form>
       </JournalContainer>
