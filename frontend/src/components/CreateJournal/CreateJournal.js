@@ -55,7 +55,7 @@ const CreateJournal = (): React.Node => {
           {/* 3 things you are grateful for */}
           <div>
             <SubHeading>
-              <i> I am grateful for </i>
+              <i> I am grateful for... </i>
             </SubHeading>
             <InputContainer>
               <Col sm="1">
@@ -82,10 +82,10 @@ const CreateJournal = (): React.Node => {
               </Col>
             </InputContainer>
           </div>
-
+          {/* 3 things you would improve today */}
           <div>
             <SubHeading>
-              <i> I am grateful for </i>
+              <i> What would make today great? </i>
             </SubHeading>
             <InputContainer>
               <Col sm="1">
