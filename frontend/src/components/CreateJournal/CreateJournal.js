@@ -10,7 +10,7 @@ const JournalContainer = Styled(Container)`
   background: #FFFFF6;
   border-radius: 8px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
-  padding: 15px;
+  padding: 30px;
 `;
 
 const SubHeading = Styled.h5`
@@ -19,24 +19,25 @@ const SubHeading = Styled.h5`
   padding-bottom: 15px;
 `;
 
-const InputContainer = Styled.div`
+const InputContainer = Styled(Row)`
   margin-top: 15px;
 `;
 
 const Label = Styled.div`
   text-align: center;
+  line-height: 30px;
 `;
 
 const Input = Styled(Form.Control)`
   background: transparent;
   border: none;
   border-bottom: 1px solid #D4D3CA;
-  border-radius: none;
+  border-radius: 0;
   font-size: 12px;
   &:focus {
     background: transparent;
     border-color: inherit;
-    border-radius: none;
+    border-radius: 0;
     box-shadow: none;
     color: inherit;
     outline: none;
@@ -49,23 +50,70 @@ const CreateJournal = (): React.Node => {
       <DisplayDate />
       <br />
       <br />
-      <JournalContainer>
-        <SubHeading>
-          <i> I am grateful for </i>
-        </SubHeading>
-        <Form>
-          <InputContainer>
-            <Row>
+      <Form>
+        <JournalContainer>
+          {/* 3 things you are grateful for */}
+          <div>
+            <SubHeading>
+              <i> I am grateful for </i>
+            </SubHeading>
+            <InputContainer>
               <Col sm="1">
                 <Label>1.</Label>
               </Col>
               <Col sm="11">
-                <Input type="text" placeholder="" />
+                <Input type="text" />
               </Col>
-            </Row>
-          </InputContainer>
-        </Form>
-      </JournalContainer>
+            </InputContainer>
+            <InputContainer>
+              <Col sm="1">
+                <Label>2.</Label>
+              </Col>
+              <Col sm="11">
+                <Input type="text" />
+              </Col>
+            </InputContainer>
+            <InputContainer>
+              <Col sm="1">
+                <Label>3.</Label>
+              </Col>
+              <Col sm="11">
+                <Input type="text" />
+              </Col>
+            </InputContainer>
+          </div>
+
+          <div>
+            <SubHeading>
+              <i> I am grateful for </i>
+            </SubHeading>
+            <InputContainer>
+              <Col sm="1">
+                <Label>1.</Label>
+              </Col>
+              <Col sm="11">
+                <Input type="text" />
+              </Col>
+            </InputContainer>
+            <InputContainer>
+              <Col sm="1">
+                <Label>2.</Label>
+              </Col>
+              <Col sm="11">
+                <Input type="text" />
+              </Col>
+            </InputContainer>
+            <InputContainer>
+              <Col sm="1">
+                <Label>3.</Label>
+              </Col>
+              <Col sm="11">
+                <Input type="text" />
+              </Col>
+            </InputContainer>
+          </div>
+        </JournalContainer>
+      </Form>
     </div>
   );
 };
