@@ -20,17 +20,15 @@ const JournalContainer = Styled(Container)`
 
 const SubHeading = Styled.h5`
   text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
 `;
 
 const InputContainer = Styled(Row)`
-  margin-top: 15px;
+  margin-top: 5px;
 `;
 
 const Label = Styled.div`
   text-align: center;
-  line-height: 30px;
+  line-height: calc(1.5em + 0.75rem + 2px);
 `;
 
 const Input = Styled(Form.Control)`
@@ -72,7 +70,7 @@ const CreateJournal = (): React.Node => {
                 <Label>1.</Label>
               </Col>
               <Col sm="11">
-                <Input type="text" />
+                <Input type="text-area" />
               </Col>
             </InputContainer>
             <InputContainer>
@@ -93,6 +91,7 @@ const CreateJournal = (): React.Node => {
             </InputContainer>
           </div>
           {/* 3 things you would improve today */}
+          <br />
           <div>
             <SubHeading>
               <i> What would make today great? </i>
@@ -123,6 +122,7 @@ const CreateJournal = (): React.Node => {
             </InputContainer>
           </div>
           {/* daily affirmations */}
+          <br />
           <div>
             <SubHeading>
               <i> Daily affirmations, I am... </i>
