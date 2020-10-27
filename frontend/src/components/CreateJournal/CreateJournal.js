@@ -33,7 +33,7 @@ const Input = Styled(Form.Control)`
   border: none;
   border-bottom: 1px solid #D4D3CA;
   border-radius: 0;
-  font-size: 12px;
+  font-size: 12pt;
   &:focus {
     background: transparent;
     border-color: inherit;
@@ -108,6 +108,17 @@ const CreateJournal = (): React.Node => {
                 <Label>3.</Label>
               </Col>
               <Col sm="11">
+                <Input type="text" />
+              </Col>
+            </InputContainer>
+          </div>
+          {/* daily affirmations */}
+          <div>
+            <SubHeading>
+              <i> Daily affirmations, I am... </i>
+            </SubHeading>
+            <InputContainer>
+              <Col sm="12">
                 <Input type="text" />
               </Col>
             </InputContainer>
