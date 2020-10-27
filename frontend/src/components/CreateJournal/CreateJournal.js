@@ -6,6 +6,10 @@ import Styled from "styled-components";
 
 import DisplayDate from "./DisplayDate";
 
+const MainContainer = Styled.div`
+  margin-bottom: 30px;
+`;
+
 const JournalContainer = Styled(Container)`
   background: #FFFFF6;
   border-radius: 8px;
@@ -46,7 +50,7 @@ const Input = Styled(Form.Control)`
 
 const CreateJournal = (): React.Node => {
   return (
-    <div>
+    <MainContainer>
       <DisplayDate />
       <br />
       <br />
@@ -125,7 +129,7 @@ const CreateJournal = (): React.Node => {
           </div>
         </JournalContainer>
       </Form>
-    </div>
+    </MainContainer>
   );
 };
 
