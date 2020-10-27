@@ -5,6 +5,7 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 import Styled from "styled-components";
 
 import DisplayDate from "./DisplayDate";
+import SwitchLogEntry from "./SwitchLogEntry";
 
 const MainContainer = Styled.div`
   margin-bottom: 30px;
@@ -49,10 +50,15 @@ const Input = Styled(Form.Control)`
 `;
 
 const CreateJournal = (): React.Node => {
+  const [logEntryType, setLogEntryType] = React.useState<string>("day");
   return (
     <MainContainer>
       <DisplayDate />
       <br />
+      <SwitchLogEntry
+        logEntryType={logEntryType}
+        setLogEntryType={setLogEntryType}
+      />
       <br />
       <Form>
         <JournalContainer>
