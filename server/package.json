@@ -4,6 +4,10 @@
   "description": "Simple journaling app to improve focus and build gratitude.",
   "main": "index.js",
   "scripts": {
+    "build": "babel src/ -d lib --copy-files",
+    "flow": "flow",
+    "lint": "./node_modules/.bin/eslint --fix ./src",
+    "start": "concurrently \"npm run build -- --watch\" \"nodemon lib/server.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,6 +20,16 @@
     "url": "https://github.com/sukruthmk/my-journal/issues"
   },
   "homepage": "https://github.com/sukruthmk/my-journal#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && flow check && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint --fix"
+    ]
+  },
   "dependencies": {
     "@babel/register": "^7.5.5",
     "bcryptjs": "^2.4.3",
